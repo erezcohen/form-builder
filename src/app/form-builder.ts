@@ -2,6 +2,7 @@ import {Component} from 'angular2/core';
 import {RouterOutlet, RouterLink, RouteConfig} from 'angular2/router';
 import {FormBuilderEdit} from './form-builder-edit';
 import {FormBuilderPreview} from './form-builder-preview';
+import {Data} from "./dataService";
 
 @RouteConfig([
   {path: '/edit', name: 'Edit', component: FormBuilderEdit, useAsDefault: true},
@@ -9,6 +10,7 @@ import {FormBuilderPreview} from './form-builder-preview';
 ])
 @Component({
   selector: 'form-builder-app',
+  providers: [Data],
   template: `
     <nav>
       <a [routerLink]="['Edit']">Edit</a>
