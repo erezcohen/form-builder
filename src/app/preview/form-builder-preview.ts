@@ -1,5 +1,5 @@
 import {Component} from 'angular2/core';
-import {Data} from "./../dataService";
+import {DataService} from "./../dataService";
 import {InputItem} from "./../input-item";
 
 @Component({
@@ -16,5 +16,5 @@ import {InputItem} from "./../input-item";
 })
 
 export class FormBuilderPreview {
-    constructor(public data:Data) {}
+    constructor(public data:DataService) {}
 }

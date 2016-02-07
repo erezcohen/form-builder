@@ -1,11 +1,10 @@
 import {Component} from 'angular2/core';
-import {Data} from "./dataService";
+import {DataService} from "./dataService";
 import {PrevieWithEdit} from "./preview/preview-with-edit";
 
 @Component({
     selector: 'form-builder-edit',
     directives: [PrevieWithEdit],
-
     template: `
     <input [(ngModel)]="currentItem">
     <button (click)="addInput()">Add Input</button>
@@ -16,8 +15,7 @@ import {PrevieWithEdit} from "./preview/preview-with-edit";
 export class FormBuilderEdit {
     currentItem = '';
 
-    constructor(public data:Data) {
-    }
+    constructor(public data:DataService) {}
 
     addInput() {
         this.data.addInput(this.currentItem);
